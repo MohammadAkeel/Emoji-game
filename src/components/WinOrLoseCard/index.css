@@ -1,128 +1,67 @@
-.win-or-lose-card {
+/* Write your code here. */
+.win-or-lose-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: #ffffff33;
-  width: 85%;
-  border: 3px solid #ffffff30;
-  border-radius: 24px;
-  margin: auto;
-  padding: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .win-or-lose-card {
-    width: 80%;
-    padding: 32px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .win-or-lose-card {
-    flex-direction: row;
-    width: 70%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .win-or-lose-card {
-    width: 60%;
-  }
-}
-
-.details-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  order: 1;
-}
-
-@media screen and (min-width: 992px) {
-  .details-section {
-    order: 0;
-  }
-}
-
-.game-status {
-  color: #ffffff;
-  font-family: 'Roboto';
-  font-size: 32px;
-  font-weight: bold;
-}
-
-@media screen and (min-width: 992px) {
-  .game-status {
-    font-size: 64px;
-  }
-}
-
-.current-score-label {
+  width: 95%;
+  max-width: 550px;
+  margin: auto;
+  border-radius: 22px;
+  margin-top: 85px;
+  padding: 20px;
+  border: 2px solid #ffffff30;
+  background-color: #ffffff33;
   text-align: center;
-  color: #ffffff;
+}
+.win-lose-image {
+  width: 210px;
+}
+.win-status {
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.best-score-text {
+  font-family: 'Roboto';
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
+  color: #ffffff;
+}
+.score-numbers {
+  margin-top: 0;
+  font-size: 35px;
   font-weight: bold;
-  margin: 0px;
-}
-
-@media screen and (min-width: 992px) {
-  .current-score-label {
-    font-size: 36px;
-  }
-}
-
-.current-score-value {
-  text-align: center;
   color: #6a59ff;
-  font-family: 'Roboto';
-  font-size: 32px;
-  font-weight: bold;
-  margin: 0px;
 }
-
 @media screen and (min-width: 768px) {
-  .current-score-value {
-    font-size: 48px;
+  .win-status {
+    font-size: 42px;
+  }
+  .best-score-text {
+    font-size: 25px;
   }
 }
-
 .play-again-button {
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  padding: 12px 22px;
+  height: 52px;
   color: #3d3d3d;
   background-color: #ffce27;
-  font-family: 'Roboto';
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 20px;
-  margin: 16px;
-  padding: 16px;
-  padding-right: 24px;
-  padding-left: 24px;
-  cursor: pointer;
-  outline: none;
+  border-radius: 18px;
 }
-
-.image-section {
-  display: flex;
-  justify-content: center;
-  order: 0;
-}
-
-@media screen and (min-width: 992px) {
-  .image-section {
-    order: 1;
+@media screen and (min-width: 768px) {
+  .win-or-lose-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px;
   }
-}
-
-.win-or-lose-image {
-  width: 150px;
-  height: 200px;
-}
-
-@media screen and (min-width: 992px) {
-  .win-or-lose-image {
-    width: 350px;
-    height: 450px;
+  .win-lose-image {
+    margin-left: 18px;
+    width: 310px;
+    order: 1;
   }
 }

@@ -1,38 +1,24 @@
+/* Write your code here. */
 .emoji-item {
-  width: 32%;
-  list-style-type: none;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  padding: 0;
 }
-
-@media screen and (min-width: 992px) {
-  .emoji-item {
-    width: 24%;
-  }
-}
-
-.emoji-btn {
+.emoji-button {
+  padding: 24px;
+  border-radius: 22px;
+  border: 2px solid #ffffff30;
   background-color: #ffffff33;
-  cursor: pointer;
-  outline: none;
-  width: 100%;
-  height: 100px;
-  border: 3px solid #ffffff30;
-  border-radius: 24px;
+  margin: 0;
 }
-
+.emoji-image {
+  width: 70px;
+  height: 70px;
+}
 @media screen and (min-width: 768px) {
-  .emoji-btn {
-    height: 200px;
+  .emoji-button {
+    padding: 38px 52px;
   }
-}
-
-.emoji-icon {
-  width: 50px;
-}
-
-@media screen and (min-width: 768px) {
-  .emoji-icon {
+  .emoji-image {
     width: 100px;
+    height: 100px;
   }
 }

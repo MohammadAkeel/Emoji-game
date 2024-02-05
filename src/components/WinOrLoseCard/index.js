@@ -1,30 +1,23 @@
+// Write your code here.
 import './index.css'
 
-const LOSE_IMAGE = 'https://assets.ccbp.in/frontend/react-js/lose-game-img.png'
-const WON_IMAGE = 'https://assets.ccbp.in/frontend/react-js/won-game-img.png'
-
 const WinOrLoseCard = props => {
-  const {isWon, onClickPlayAgain, score} = props
-  const imageUrl = isWon ? WON_IMAGE : LOSE_IMAGE
-  const gameStatus = isWon ? 'You Won' : 'You Lose'
-  const scoreLabel = isWon ? 'Best Score' : 'Score'
+  const {score, winStatus, playAgain} = props
+
+  const imageUrl = winStatus
+    ? 'https://assets.ccbp.in/frontend/react-js/won-game-img.png'
+    : 'https://assets.ccbp.in/frontend/react-js/lose-game-img.png'
 
   return (
-    <div className="win-or-lose-card">
-      <div className="details-section">
-        <h1 className="game-status">{gameStatus}</h1>
-        <p className="current-score-label">{scoreLabel}</p>
-        <p className="current-score-value">{score}/12</p>
-        <button
-          type="button"
-          className="play-again-button"
-          onClick={onClickPlayAgain}
-        >
+    <div className="win-or-lose-container">
+      <img src={imageUrl} alt="win or lose" className="win-lose-image" />
+      <div className="content-container">
+        <h1 className="win-status">You {winStatus ? 'Won' : 'Lose'}</h1>
+        <p className="best-score-text">{winStatus ? 'Best Score' : 'Score'}</p>
+        <p className="score-numbers">{score}/12</p>
+        <button className="play-again-button" type="button" onClick={playAgain}>
           Play Again
         </button>
-      </div>
-      <div className="image-section">
-        <img className="win-or-lose-image" src={imageUrl} alt="win or lose" />
       </div>
     </div>
   )
